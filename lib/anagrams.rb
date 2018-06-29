@@ -7,11 +7,11 @@ class Anagram < String
   end
 
   def is_it_anagram ()
-    # word1_str = @word1.gsub(/\s+/, "")
-    # word2_str = @word2.gsub(/\s+/, "")
+    word1_str = @word1.gsub(/\s+/, "")
+    word2_str = @word2.gsub(/\s+/, "")
 
-    word1_array = @word1.downcase.split("").sort
-    word2_array = @word2.downcase.split("").sort
+    word1_array = word1_str.downcase.split("").sort
+    word2_array = word2_str.downcase.split("").sort
     vowels = ["a", "e", "i", "o", "u", "y"]
 
 
