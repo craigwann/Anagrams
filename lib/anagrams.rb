@@ -16,8 +16,10 @@ class Anagram < String
 
 
 
-    if (word1_array & vowels).empty? | (word2_array & vowels).empty?
-      "not a word"
+    if (word1_array & vowels).empty?
+      "first word or phrase is not a word"
+    elsif (word2_array & vowels).empty?
+      "second word or phrase is not a word"
     elsif (word1_array & word2_array).empty?
       "antigram"
     elsif word1_array == word2_array
@@ -25,6 +27,5 @@ class Anagram < String
     else
       false
     end
-
   end
 end
