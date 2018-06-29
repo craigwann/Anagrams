@@ -2,8 +2,6 @@ class Anagram < String
   def initialize(word1, word2)
     @word1 = word1
     @word2 = word2
-    # @word1_array = word1_array
-    # @word2_array = word2_array
   end
 
   def is_it_anagram ()
@@ -14,14 +12,12 @@ class Anagram < String
     word2_array = word2_str.downcase.split("").sort
     vowels = ["a", "e", "i", "o", "u", "y"]
 
-
-
     if (word1_array & vowels).empty?
-      "first word or phrase is not a word"
+      "first word/phrase is NOT a word"
     elsif (word2_array & vowels).empty?
-      "second word or phrase is not a word"
+      "second word/phrase is NOT a word"
     elsif (word1_array & word2_array).empty?
-      "antigram"
+      "No, this is an ANTIGRAM"
     elsif word1_array == word2_array
       true
     else

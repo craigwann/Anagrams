@@ -7,7 +7,13 @@ loop do
   word2 = gets()
 
   anagram = Anagram.new(word1, word2)
-  puts("is it an anagram? ", anagram.is_it_anagram())
+  if anagram.is_it_anagram() == true
+    puts("Yes, this is an anagram")
+  elsif anagram.is_it_anagram() == false
+    puts("No, this is NOT an anagram")
+  else puts(anagram.is_it_anagram())
+  end
+  puts("  ")
   puts("Do you have another anagram to check? (Y/N)")
 
   endloop = gets().chomp().downcase()
