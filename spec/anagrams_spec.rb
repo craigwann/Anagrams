@@ -20,7 +20,7 @@ describe ('Anagram#anagrams') do
     expect(anagram.is_it_anagram()).to(eq("not a word"))
   end
   it("checks if words are antigrams") do
-    anagram = Anagram.new("your", "ruby")
+    anagram = Anagram.new("your", "mine")
     expect(anagram.is_it_anagram()).to(eq("antigram"))
   end
 end

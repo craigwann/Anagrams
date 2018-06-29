@@ -13,7 +13,8 @@ class Anagram < String
 
     if (word1_array & vowels).empty? | (word2_array & vowels).empty?
       "not a word"
-
+    elsif (word1_array & word2_array).empty?
+      "antigram"
     elsif word1_array == word2_array
       return true
     end
