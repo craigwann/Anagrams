@@ -15,4 +15,12 @@ describe ('Anagram#anagrams') do
     anagram = Anagram.new("bxt", "eat")
     expect(anagram.is_it_anagram()).to(eq("not a word"))
   end
+  it("checks if words contain vowels") do
+    anagram = Anagram.new("eat", "bmn")
+    expect(anagram.is_it_anagram()).to(eq("not a word"))
+  end
+  it("checks if words are antigrams") do
+    anagram = Anagram.new("your", "ruby")
+    expect(anagram.is_it_anagram()).to(eq("antigram"))
+  end
 end
