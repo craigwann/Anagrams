@@ -23,4 +23,8 @@ describe ('Anagram#anagrams') do
     anagram = Anagram.new("your", "mine")
     expect(anagram.is_it_anagram()).to(eq("antigram"))
   end
+  it("checks if multi-word strings are antigrams") do
+    anagram = Anagram.new("rail safety", "fairy tales")
+    expect(anagram.is_it_anagram()).to(eq(true))
+  end
 end
