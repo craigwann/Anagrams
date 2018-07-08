@@ -2,7 +2,7 @@ require('rspec')
 require('pry')
 require('anagrams')
 
-describe ('Anagram#anagrams') do
+describe ('Anagram#is_it_anagram') do
   it("checks if 2 words are anagrams") do
     anagram = Anagram.new("ruby", "bury")
     expect(anagram.is_it_anagram()).to(eq(true))
@@ -30,5 +30,9 @@ describe ('Anagram#anagrams') do
   it("checks if input-word strings with punctuation are anagrams") do
     anagram = Anagram.new("customers?", "store scum!")
     expect(anagram.is_it_anagram()).to(eq(true))
+  end
+  it("checks if a multi-word input-word strings are words") do
+    anagram = Anagram.new("xxx eat", "tea")
+    expect(anagram.is_it_anagram()).to(eq("first word/phrase is NOT a word"))
   end
 end
