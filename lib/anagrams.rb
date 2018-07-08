@@ -12,7 +12,7 @@ class Anagram < String
       vowels = ["a", "e", "i", "o", "u", "y"]
       vowel_check = word_element.downcase.split("").sort
       if (vowel_check & vowels).empty?
-        # return "first word/phrase is NOT a word"
+        return "first word/phrase is NOT a word"
       end
     end
 
